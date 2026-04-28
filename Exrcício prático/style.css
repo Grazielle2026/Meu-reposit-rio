@@ -1,0 +1,92 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background: #ecd6e2;
+    color: #000000;
+    text-align: center;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Títulos principais */
+
+h1 {
+    font-size: 3rem;
+    color: #a20ac8;
+    margin: 20px 0;
+    animation: fadeInDown 1s ease;
+}
+
+/* Subtítulos */
+h2 {
+    font-size: 2rem;
+    color: #a20ac8;
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+    animation: slideIn 1.2s ease;
+}
+
+/* Linha animada abaixo do h2 */
+h2::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #aa78b2;
+    display: block;
+    margin: 5px auto;
+    transition: 0.5s;
+}
+
+h2:hover::after {
+    width: 100%;
+}
+
+/* Listas */
+ul, ol {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: #d3cef4;
+}
